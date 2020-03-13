@@ -4,6 +4,13 @@ An update to Cordova Music Controls plugin to support Capacitor
 
 [documentation in progress]
 
+# work in progress
+
+this integration is a work in progress. currently, ios is mostly working (some bugs), and android is unfinished.
+
+PRs for rounding out the functionalities are encouraged.
+
+
 # installation
 
 npm i capacitor-music-controls-plugin
