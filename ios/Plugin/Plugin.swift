@@ -28,6 +28,8 @@ public class CapacitorMusicControls: CAPPlugin {
     
     var musicControlsInfo: CapacitorMusicControlsInfo!;
     var latestEventCallbackId: Any?;
+    var evenListactive = false;
+
  
     @objc func create(_ call: CAPPluginCall) {
         let options: Dictionary = call.options;
@@ -45,7 +47,9 @@ public class CapacitorMusicControls: CAPPlugin {
         print("initial npi:")
        print(self.musicControlsInfo)
  
-        self.registerMusicControlsEventListener();
+        if (!self.evenListactive) {
+            self.registerMusicControlsEventListener();
+        }
 
         // DispatchQueue.background(delay: 5.0, background: {
         
@@ -392,7 +396,7 @@ public class CapacitorMusicControls: CAPPlugin {
     }
     
     func registerMusicControlsEventListener(){
-        
+       self.evenListactive = true;
        DispatchQueue.main.async { // Correct
 
             UIApplication.shared.beginReceivingRemoteControlEvents();
@@ -503,7 +507,7 @@ public class CapacitorMusicControls: CAPPlugin {
     }
     
     func deregisterMusicControlsEventListener(){
-        
+        self.evenListactive = false; 
         DispatchQueue.main.async { // Correct
 
         
