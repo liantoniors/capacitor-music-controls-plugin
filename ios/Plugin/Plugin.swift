@@ -486,11 +486,10 @@ public class CapacitorMusicControls: CAPPlugin {
 
                  }
             }
-//            if(self.musicControlsInfo.hasScrubbing!){
-//                commandCenter.changePlaybackPositionCommand.isEnabled = true;
-//                commandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(self.changedThumbSliderOnLockScreen(_:)));
+            if(self.musicControlsInfo.hasScrubbing!){
+                commandCenter.changePlaybackPositionCommand.isEnabled = true;
+                commandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(self.changedThumbSliderOnLockScreen(_:)));
 //                commandCenter.changePlaybackPositionCommand.addTarget { [unowned self] event in
-//
 //                    print("changePlaybackPositionCommand");
 //
 //                    self.notifyListeners("controlsNotification", data: [ "message" : "music-controls-skip-to", "position" : event.positionTime ])
@@ -498,7 +497,7 @@ public class CapacitorMusicControls: CAPPlugin {
 //                        return .success
 //
 //                }
-//            }
+            }
 
         }
  
