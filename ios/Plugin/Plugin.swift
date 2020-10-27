@@ -486,9 +486,9 @@ public class CapacitorMusicControls: CAPPlugin {
 
                  }
             }
-//            if(self.musicControlsInfo.hasScrubbing!){
-//                commandCenter.changePlaybackPositionCommand.isEnabled = true;
-//                commandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(self.changedThumbSliderOnLockScreen(_:)));
+            if(self.musicControlsInfo.hasScrubbing!){
+                commandCenter.changePlaybackPositionCommand.isEnabled = true;
+                commandCenter.changePlaybackPositionCommand.addTarget(self, action: #selector(self.changedThumbSliderOnLockScreen(_:)));
 //                commandCenter.changePlaybackPositionCommand.addTarget { [unowned self] event in
 //
 //                    print("changePlaybackPositionCommand");
@@ -498,7 +498,7 @@ public class CapacitorMusicControls: CAPPlugin {
 //                        return .success
 //
 //                }
-//            }
+            }
 
         }
  
